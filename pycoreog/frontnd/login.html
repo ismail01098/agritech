@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Farmers First</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('assets/farmland-background.svg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .login-page {
+            position: relative;
+            z-index: 1;
+        }
+        .login-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <main class="login-page">
+        <section class="login-hero">
+            <div class="login-banner">
+                <span class="eyebrow">Welcome back</span>
+                <h1>Farmers First login</h1>
+                <p>Secure access for farmers and helpers. Login to save your profile, fetch data, and use the AI assistant.</p>
+                <div class="hero-actions">
+                    <a class="button" href="assistant.html">Assistant</a>
+                    <a class="button button-secondary" href="index.html">Home</a>
+                </div>
+            </div>
+            <div class="login-panel">
+                <div class="login-card">
+                    <h2>Login or register</h2>
+                    <p class="hint">Use any username and a secure password. Your account is stored in the backend database.</p>
+                    <div class="auth-tabs">
+                        <button id="textTab" class="tab active">Text Login</button>
+                        <button id="faceTab" class="tab">Face Login</button>
+                    </div>
+                    <div id="textAuth" class="auth-section">
+                        <label for="loginUsername">Username</label>
+                        <input id="loginUsername" type="text" placeholder="Enter your username" autocomplete="username" />
+                        <label for="loginPassword">Password</label>
+                        <input id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password" />
+                        <div class="login-actions">
+                            <button id="loginBtn" class="button button-primary">Login</button>
+                            <button id="registerBtn" class="button button-secondary">Register</button>
+                        </div>
+                    </div>
+                    <div id="faceAuth" class="auth-section hidden">
+                        <video id="video" width="320" height="240" autoplay></video>
+                        <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+                        <div class="login-actions">
+                            <button id="captureBtn" class="button button-primary">Capture Face</button>
+                            <button id="faceLoginBtn" class="button button-secondary">Login with Face</button>
+                            <button id="faceRegisterBtn" class="button button-secondary">Register Face</button>
+                        </div>
+                    </div>
+                    <div id="loginMessage" class="api-log">Login your account to unlock the assistant.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

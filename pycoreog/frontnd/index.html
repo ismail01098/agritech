@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=login.html">
+    <title>Farmers First - Voice & Market Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Farmers First</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="market.html">Market</a>
+            <a href="assistant.html">Assistant</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Farmer Support</span>
+                <h1>Helping farmers remove middlemen with weather and soil insights</h1>
+                <p>Our hackathon project connects farmers directly to better market choices, delivers weather alerts, and checks soil health in a simple, clean homepage.</p>
+                <div class="hero-actions">
+                    <a class="button" href="assistant.html">Open Assistant</a>
+                    <a class="button button-secondary" href="#market">Why it matters</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <div class="hero-card">
+                    <p class="hero-card-label">What we do</p>
+                    <h2>Direct selling, market clarity, and farming insights</h2>
+                    <p>Farmers can ask the voice assistant, use text chat, and view live weather or soil recommendations for their field.</p>
+                    <ul class="feature-list">
+                        <li>Reduce middlemen and improve farmer margins</li>
+                        <li>Weather advice for crop planning</li>
+                        <li>Soil moisture insight and healthy soil guidance</li>
+                    </ul>
+                </div>
+                <div class="hero-image-panel">
+                    <img src="assets/hero-farm.svg" alt="Farm illustration" class="hero-image" />
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="info-section">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2>Built for farmers who want control and clarity</h2>
+                <p>We create farmer-first tools that make it easier to trade, plan, and grow without paying extra to middlemen.</p>
+            </div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Why farmers win</h3>
+                    <p>Direct connections, transparent pricing, and faster decisions help farmers keep more of the value they create.</p>
+                </article>
+                <article class="info-card">
+                    <h3>How we help</h3>
+                    <p>By offering market guidance, weather insights, and soil checks in one clean interface, smallholders can plan with confidence.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Our promise</h3>
+                    <p>Keep the design simple, the information useful, and the interaction friendly for every farmer in the demo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="market" class="market-section">
+            <div class="section-header">
+                <span class="section-tag">Our Topic</span>
+                <h2>Removing middlemen for better farmer earnings</h2>
+                <p>Farmers need fair access to buyers and tools to understand harvest, soil, and weather conditions without added costs.</p>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <img src="assets/market.svg" alt="Market icon" class="section-icon" />
+                    <h3>Direct buyers</h3>
+                    <p>Link farmers with buyers directly and reduce the cost of commissions and agent fees.</p>
+                </div>
+                <div class="market-card">
+                    <img src="assets/weather.svg" alt="Weather icon" class="section-icon" />
+                    <h3>Price visibility</h3>
+                    <p>Show better pricing ideas so farmers can negotiate more confidently and avoid unfair middlemen rates.</p>
+                </div>
+                <div class="market-card">
+                    <img src="assets/soil.svg" alt="Soil icon" class="section-icon" />
+                    <h3>Smart planning</h3>
+                    <p>Weather and soil data help farmers choose the best time to sow, irrigate, and harvest with lower risk.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="assistant" class="assistant-section">
+            <div class="assistant-grid">
+                <div class="assistant-card">
+                    <h2>Voice and text assistant</h2>
+                    <p>Talk or type to get farming advice, ask about weather, soil, and reducing middleman dependency.</p>
+                    <div class="control-row">
+                        <button id="voiceBtn" class="button button-primary">Start Voice</button>
+                        <button id="stopBtn" class="button button-secondary">Stop</button>
+                    </div>
+                    <textarea id="chatLog" readonly rows="6" placeholder="Conversation log appears here..."></textarea>
+                    <div class="chat-input-row">
+                        <input id="textInput" type="text" placeholder="Type a question for the assistant" />
+                        <button id="sendBtn" class="button button-primary">Send</button>
+                    </div>
+                    <div class="status-bar">Status: <span id="statusText">Ready to listen.</span></div>
+                </div>
+
+                <div class="api-panel">
+                    <div class="section-header small">
+                        <span class="section-tag">Field Support</span>
+                        <h2>Weather and soil API tools</h2>
+                        <p>Enter your location, then fetch weather or soil guidance for your farm.</p>
+                    </div>
+                    <div class="api-entry">
+                        <label for="locationInput">Location</label>
+                        <input id="locationInput" type="text" placeholder="City, village, or district" />
+                    </div>
+                    <div class="api-actions">
+                        <button id="weatherBtn" class="button button-primary">Get Weather</button>
+                        <button id="soilBtn" class="button button-secondary">Check Soil</button>
+                    </div>
+                    <div class="api-output-grid">
+                        <div class="api-card">
+                            <h3>Weather forecast</h3>
+                            <div id="weatherOutput">Enter a location and press Get Weather.</div>
+                        </div>
+                        <div class="api-card">
+                            <h3>Soil health</h3>
+                            <div id="soilOutput">Enter a location and press Check Soil.</div>
+                        </div>
+                    </div>
+                    <div id="apiLog" class="api-log">Use the API tools for faster farm decisions.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2>Need a demo or farmer support?</h2>
+                <p>Reach out to the team or continue using the assistant for quick farming guidance.</p>
+            </div>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <strong>Email</strong>
+                    <p>farmersfirst@example.com</p>
+                </div>
+                <div class="contact-card">
+                    <strong>Location</strong>
+                    <p>Hackathon demo � farmer support tool</p>
+                </div>
+                <div class="contact-card">
+                    <strong>Demo tip</strong>
+                    <p>Use voice for hands-free chat, or type if the browser does not support speech recognition.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">Farmers First - designed to help farmers trade fair, plan harvests, and avoid middlemen.</footer>
+    <script src="script.js"></script>
+</body>
+</html>

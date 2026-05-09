@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - Farmers First</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Farmers First</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="assistant.html">Assistant</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero market-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Market access</span>
+                <h1>Cut out middlemen and get better pricing</h1>
+                <p>We give farmers better market visibility, price guidance, and tools to connect with buyers directly.</p>
+                <div class="hero-actions">
+                    <a class="button" href="index.html">Go Home</a>
+                    <a class="button button-secondary" href="assistant.html">Open Assistant</a>
+                </div>
+            </div>
+            <div class="hero-panel hero-image-panel">
+                <img src="assets/market.svg" alt="Market illustration" class="hero-image" />
+            </div>
+        </section>
+
+        <section class="market-section">
+            <div class="section-header">
+                <span class="section-tag">Product Comparison</span>
+                <h2>Compare prices of fruits, vegetables & crops</h2>
+                <p>Get real-time market pricing and product information. Enter products to compare prices across Indian markets.</p>
+            </div>
+            
+            <div class="comparison-tool">
+                <div class="comparison-input">
+                    <label for="product1">Product 1</label>
+                    <input id="product1" type="text" placeholder="e.g., Tomato, Onion, Rice, Wheat" />
+                    
+                    <label for="product2">Product 2</label>
+                    <input id="product2" type="text" placeholder="e.g., Tomato, Onion, Rice, Wheat" />
+                    
+                    <button id="compareBtn" class="button button-primary">Compare Prices</button>
+                    <div id="comparisonMessage" class="api-log"></div>
+                </div>
+
+                <div id="comparisonResult" class="comparison-result hidden">
+                    <div class="comparison-cards">
+                        <div id="product1Card" class="product-card">
+                            <img id="product1Img" src="" alt="Product 1" class="product-image" />
+                            <h3 id="product1Name"></h3>
+                            <p class="product-price" id="product1Price"></p>
+                            <p class="product-market" id="product1Market"></p>
+                        </div>
+                        
+                        <div class="comparison-divider">VS</div>
+                        
+                        <div id="product2Card" class="product-card">
+                            <img id="product2Img" src="" alt="Product 2" class="product-image" />
+                            <h3 id="product2Name"></h3>
+                            <p class="product-price" id="product2Price"></p>
+                            <p class="product-market" id="product2Market"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-analysis">
+                        <h3>Price Analysis</h3>
+                        <p id="priceAnalysis"></p>
+                        <p id="recommendation"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="market-section">
+            <div class="section-header">
+                <span class="section-tag">Market Features</span>
+                <h2>Market tools to keep farmers in control</h2>
+                <p>Clear pricing, direct buyer ideas, and fair trade insights help farmers earn more from every crop.</p>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <img src="assets/weather.svg" alt="Weather icon" class="section-icon" />
+                    <h3>Predictive weather</h3>
+                    <p>Use weather data to decide the best window for selling and harvesting.</p>
+                </div>
+                <div class="market-card">
+                    <img src="assets/soil.svg" alt="Soil icon" class="section-icon" />
+                    <h3>Soil health insight</h3>
+                    <p>Soil conditions guide better crop quality and help market the harvest with confidence.</p>
+                </div>
+                <div class="market-card">
+                    <img src="assets/assistant.svg" alt="Assistant icon" class="section-icon" />
+                    <h3>Smart assistant</h3>
+                    <p>Voice and text advice makes market timing and farm decisions easier for everyone.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">Farmers First - match farmers with stronger market choices.</footer>
+    <script src="market.js"></script>
+</body>
+</html>

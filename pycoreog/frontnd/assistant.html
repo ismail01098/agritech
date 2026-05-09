@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant - Farmers First</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Farmers First</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="market.html">Market</a>
+            <a href="assistant.html">Assistant</a>
+        </nav>
+    </header>
+    <main>
+        <section class="assistant-hero">
+            <div class="hero-copy">
+                <span class="eyebrow">AI Assistant</span>
+                <h1>Farm advice, weather alerts, and soil support</h1>
+                <p>Use the voice assistant or text input to get farming tips, weather guidance, and soil status without leaving this page.</p>
+                <div class="hero-actions">
+                    <a class="button" href="index.html">Back to Home</a>
+                </div>
+            </div>
+            <div class="hero-image-panel">
+                <img src="assets/assistant.svg" alt="Assistant illustration" class="hero-image" />
+            </div>
+        </section>
+
+        <section class="assistant-section">
+            <div class="assistant-grid">
+                <div class="assistant-card">
+                    <h2>Interactive AI Assistant</h2>
+                    <p>Ask questions about market, crop planning, weather, or soil health. The assistant responds with text and voice.</p>
+                    <div class="control-row">
+                        <button id="voiceBtn" class="button button-primary">Start Voice</button>
+                        <button id="stopBtn" class="button button-secondary">Stop</button>
+                    </div>
+                    <textarea id="chatLog" readonly rows="8" placeholder="Conversation log appears here..."></textarea>
+                    <div class="chat-input-row">
+                        <input id="textInput" type="text" placeholder="Type a question for the assistant" />
+                        <button id="sendBtn" class="button button-primary">Send</button>
+                    </div>
+                    <div class="status-bar">Status: <span id="statusText">Ready to listen.</span></div>
+                </div>
+
+                <div class="api-panel">
+                    <div class="section-header small">
+                        <span class="section-tag">Field Support</span>
+                        <h2>Weather and soil API tools</h2>
+                        <p>Enter your location and fetch weather or soil data to support farm decisions.</p>
+                    </div>
+                    <div class="api-entry">
+                        <label for="locationInput">Location</label>
+                        <input id="locationInput" type="text" placeholder="City, village, or district" />
+                    </div>
+                    <div class="api-actions">
+                        <button id="weatherBtn" class="button button-primary">Get Weather</button>
+                        <button id="soilBtn" class="button button-secondary">Check Soil</button>
+                    </div>
+                    <div class="api-output-grid">
+                        <div class="api-card">
+                            <h3>Weather forecast</h3>
+                            <div id="weatherOutput">Enter a location and press Get Weather.</div>
+                        </div>
+                        <div class="api-card">
+                            <h3>Soil health</h3>
+                            <div id="soilOutput">Enter a location and press Check Soil.</div>
+                        </div>
+                    </div>
+                    <div id="apiLog" class="api-log">Use the API tools for faster farm decisions.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">Farmers First - helping farmers trade fair and plan harvests with AI support.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
